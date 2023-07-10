@@ -1,0 +1,15 @@
+PyMuPDF
+numpy
+scikit-learn
+tensorflow
+tensorflow-hub
+openai==0.10.2
+langchain-serve
+seaborn
+tf-nightly
+fitz
+frontend
+tools
+urllib3==1.26.7
+fastapi
+scikit-learn
