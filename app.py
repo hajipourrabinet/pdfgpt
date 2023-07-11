@@ -5,7 +5,7 @@ import urllib.request
 import logging
 from pathlib import Path
 from tempfile import NamedTemporaryFile
-
+import requests
 import fitz
 import numpy as np
 import openai
@@ -19,6 +19,7 @@ app = FastAPI()
 
 # Set the logging configuration
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
+
 
 def download_pdf(url, output_path):
     urllib.request.urlretrieve(url, output_path)
@@ -197,4 +198,4 @@ def read_root():
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run(app, port=8080)
+    uvicorn.run(app, host="0.0.0.0", port=8080)
